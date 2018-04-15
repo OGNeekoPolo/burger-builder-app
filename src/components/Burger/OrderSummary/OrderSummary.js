@@ -2,15 +2,17 @@ import React from 'react';
 import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button/Button';
 
+
 const orderSummary = (props) => {
   const ingredientSummary = Object.keys(props.ingredients)
-      .map(igKey => {
-        return(
-            <li key={igKey}>
-              <span style={{textTransform: 'capitalized'}}>{igKey}</span>: x{props.ingredients[igKey]}
-            </li>
-        );
-      });
+    .map(igKey => {
+      return(
+          <li key={igKey}>
+            <span style={{textTransform: 'capitalized'}}>{igKey}</span>: x{props.ingredients[igKey]}
+          </li>
+      );
+    });
+
 
   return (
     <Aux>
